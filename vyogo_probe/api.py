@@ -38,7 +38,8 @@ def ping():
         "app": "vyogo_probe",
         "version": __version__,
         "auto_deploy_verified": True,
-        "message": "Automated git-to-fpm deployment succeeded!",
+        "message": "Automated git-to-fpm deployment succeeded on live push!",
+        "iteration": 2,
         "now": str(now_datetime()),
     }
 
