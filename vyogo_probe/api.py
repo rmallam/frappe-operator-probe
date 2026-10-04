@@ -31,6 +31,18 @@ def _deps():
     return out
 
 
+@frappe.whitelist(allow_guest=True)
+def ping():
+    """Public probe endpoint to easily verify automated deployment."""
+    return {
+        "app": "vyogo_probe",
+        "version": __version__,
+        "auto_deploy_verified": True,
+        "message": "Automated git-to-fpm deployment succeeded!",
+        "now": str(now_datetime()),
+    }
+
+
 @frappe.whitelist()
 def status():
     """One dict with every observable the CR tests assert on."""
