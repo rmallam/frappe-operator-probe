@@ -41,7 +41,7 @@ def ping():
         "auto_deploy_version": "0.1.7",
         "message": "Automated git-to-fpm deployment succeeded on live push! New UI fields: deployment_badge, auto_deploy_version, verified_ok.",
         "new_ui_fields": ["deployment_badge", "auto_deploy_version", "verified_ok"],
-        "iteration": 6,
+        "iteration": 7,
         "now": str(now_datetime()),
     }
 
